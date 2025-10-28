@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Kotta+One&display=swap');
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  cursor: url('../img/Cursor.cur'), auto;
+  font-family: 'Kotta One', serif;
+ -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+
+}
+
+.bg-custom-gradient {
+  background: linear-gradient(to right, 
+    rgba(49, 71, 11, 0), 
+    rgba(72, 213, 88, 0.5), 
+    rgba(0, 0, 0, 1)
+  );
+}
+
+
+.bg-dark-gradient {
+  background: linear-gradient(to right,
+    #0A0A0A 0%,
+    #0A0A0A 0%,
+    #111111 0%,
+    #111111 0%,
+    #111111 100%
+  );
+}
+
+.paragrafo{
+  @apply  text-[0.625rem] sm:text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl;
+   color: aliceblue;
+}
+.titulo{
+   @apply text-base sm:text-lg md:text-xl lg:text-2xl xl:text-2xl 2xl:text-2xl font-bold leading-snug tracking-tight whitespace-nowrap;
+ color: aliceblue;
+}
+.subtitulo {
+  @apply text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl 2xl:text-xl font-semibold leading-snug tracking-normal whitespace-nowrap;
+  color: aliceblue;
+}
