@@ -8,9 +8,7 @@ export default {
     extend: {
  
 
-fontFamily: {
-        kotta: ['"Kotta One"', 'serif'],
-      },
+
 
   
 

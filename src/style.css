@@ -1,46 +1,120 @@
-@import url('https://fonts.googleapis.com/css2?family=Kotta+One&display=swap');
 @import "tailwindcss";
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Kotta+One&display=swap');
 
 body {
   cursor: url('../img/Cursor.cur'), auto;
   font-family: 'Kotta One', serif;
- -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-
+  overflow-x: hidden;
 }
 
 .bg-custom-gradient {
-  background: linear-gradient(to right, 
-    rgba(49, 71, 11, 0), 
+  background: linear-gradient(90deg, 
+    transparent,
     rgba(72, 213, 88, 0.5), 
-    rgba(0, 0, 0, 1)
+    #000
   );
 }
 
-
 .bg-dark-gradient {
-  background: linear-gradient(to right,
-    #0A0A0A 0%,
-    #0A0A0A 0%,
-    #111111 0%,
-    #111111 0%,
-    #111111 100%
-  );
+  background: linear-gradient(90deg, #0A0A0A, #111111);
+}
+
+.paragrafo, .titulo, .subtitulo {
+  color: aliceblue;
 }
 
 .paragrafo{
-  @apply  text-[0.625rem] sm:text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl;
-   color: aliceblue;
+  @apply text-[0.625rem] sm:text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl;
 }
 .titulo{
-   @apply text-base sm:text-lg md:text-xl lg:text-2xl xl:text-2xl 2xl:text-2xl font-bold leading-snug tracking-tight whitespace-nowrap;
- color: aliceblue;
+   @apply text-base sm:text-lg md:text-xl lg:text-2xl font-bold leading-snug tracking-tight whitespace-nowrap;
 }
 .subtitulo {
-  @apply text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl 2xl:text-xl font-semibold leading-snug tracking-normal whitespace-nowrap;
-  color: aliceblue;
+  @apply text-sm sm:text-base md:text-lg lg:text-xl font-semibold leading-snug tracking-normal whitespace-nowrap;
+}
+
+/* Menu Mobile Styles */
+.mobile-menu-btn {
+  @apply md:hidden flex fixed flex-col justify-center items-center w-10 h-10 py-2;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.mobile-menu-btn span {
+  @apply block w-6 h-0.5 bg-white transition-all duration-300 ease-in-out;
+}
+
+.mobile-menu-btn span:not(:last-child) {
+  @apply mb-1.5;
+}
+
+/* Animação para X */
+.mobile-menu-btn.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.mobile-menu-btn.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-btn.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Menu Mobile - CORREÇÃO PRINCIPAL */
+.mobile-menu {
+  @apply fixed top-0 left-0 w-full h-full    ;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 999;
+  
+  /* Adicione estas propriedades: */
+  visibility: hidden;
+  
+  
+}
+
+.mobile-menu{
+  background-color: rgba(0, 0, 0, 0.9); /* 90% opacidade */
+}
+
+
+
+.mobile-menu.active {
+  transform: translateX(0);
+  visibility: visible;
+  opacity: 1;
+}
+
+.mobile-menu-content {
+  @apply flex flex-col items-center justify-center h-full gap-8 pt-20;
+}
+
+.mobile-nav-link {
+  @apply text-xl font-semibold py-3 px-6 transition-all duration-300;
+  font-family: 'Kotta One', serif;
+  color: aliceblue; /* Adicione a cor */
+}
+
+.mobile-nav-link:hover {
+  @apply text-[#48d558] transform scale-110;
+}
+
+/* Overlay */
+.menu-overlay {
+  @apply fixed inset-0 bg-black ;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+  z-index: 998;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
 }
