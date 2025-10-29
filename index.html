@@ -18,8 +18,8 @@
   <title>Kilua Yt</title>
   <!-- Titulo da pagina -->
 
-  <script type="module" crossorigin src="/kilua-kt/assets/index-DjzsbOtv.js"></script>
-  <link rel="stylesheet" crossorigin href="/kilua-kt/assets/index-cDtvtEbQ.css">
+  <script type="module" crossorigin src="/kilua-kt/assets/index-B5sPQ-x7.js"></script>
+  <link rel="stylesheet" crossorigin href="/kilua-kt/assets/index-BmtPreRk.css">
 </head>
 <!-- Corpo da pagina -->
 <body class="flex flex-col gap-6 bg-dark-gradient" >
@@ -27,7 +27,33 @@
 
 
 <!-- Cabeçalho-->
-  <header class="flex flex-col  border-b border-orange-400">
+  <header class="flex flex-col  border-b border-orange-400" id="home">
+
+
+
+<!-- Botão Hamburguer -->
+<button class="       mobile-menu-btn cursor-pointer" id="mobileMenuBtn">
+  <i class=" text-orange-400 fa-solid fa-bars"></i>
+</button>
+
+<!-- Menu Mobile -->
+
+<div class="mobile-menu bg-verde-transparente  " id="mobileMenu">
+  <div class="mobile-menu-content">
+    <a href="#home" class="mobile-nav-link">Início</a>
+    <a href="#videos" class="mobile-nav-link">Videos</a>
+    <a href="#guia" class="mobile-nav-link">Guia</a>
+    <a href="#guia" class="mobile-nav-link">Eventos</a>
+    <a href="#contact" class="mobile-nav-link">Sobre Mim</a>
+  </div>
+</div>
+
+<!-- Overlay -->
+<div class="menu-overlay" id="menuOverlay"></div>
+
+
+
+    
     <!-- Menu-->
 <div class="hidden md:flex md:w-screen bg-green-500 h-20 text-white px-4 flex-row border border-orange-400">
 
@@ -37,23 +63,23 @@
         <p class="text-red-500  font-kotta text-2xl whitespace-nowrap ">Kilua Kt</p>
       </div>
       <div class=" w-full flex  justify-center text-black gap-16 ">
-        <a class="flex items-center  " href="">
+        <a class="flex items-center  " href="#home">
           <img class="h-12 w-12" src="/kilua-kt/assets/MedievalHouse-D91wJndU.png" alt="">
           <p class=" font-kotta text-2xl ">Início</p>
         </a>
-        <a class="flex items-center  " href="">
+        <a class="flex items-center  " href="#videos">
           <img class="h-12 w-12" src="/kilua-kt/assets/BowArrow-CiMOgtBs.png" alt="">
           <p class=" font-kotta text-2xl ">Videos</p>
         </a>
-        <a class="flex items-center  " href="">
+        <a class="flex items-center  " href="#guia">
           <img class="h-12 w-12" src="/kilua-kt/assets/Sword-7ZPuP0_A.png" alt="">
           <p class=" font-kotta text-2xl ">Guia</p>
         </a>
-        <a class="flex items-center  " href="">
+        <a class="flex items-center  " href="#guia">
           <img class="h-12 w-12" src="/kilua-kt/assets/Quest-1Z73InjA.png" alt="">
           <p class=" font-kotta text-2xl ">Eventos</p>
         </a>
-        <a class="flex items-center  " href="">
+        <a class="flex items-center  " href="#contact">
           <img class="h-12 w-12" src="/kilua-kt/assets/Shield-CBSC37uS.png" alt="">
           <p class="font-kotta text-2xl ">Sobre mim</p>
         </a>
@@ -67,7 +93,7 @@
 <!-- Textos e botoes-->
     <div class="w-full h-90 flex justify-center   flex-col gap-12 items-center ">
 
-      <h1 style="color: #E8A251;" class="font-semibold drop-shadow-2xl 2xl:text-4xl xl:text-4xl lg:text-3xl md:text-2xl sm:text-1xl text-2xl whitespace-nowrap text-shadow-lg ">Bem vindo ao Meu Canal
+      <h1 style="color: #E8A251;" class="font-semibold  drop-shadow-2xl 2xl:text-4xl xl:text-4xl lg:text-3xl md:text-2xl sm:text-1xl text-2xl whitespace-nowrap text-shadow-lg ">Bem vindo ao Meu Canal
       </h1>
       <h2 class=" flex text-center  text-white font-kotta sm:whitespace-nowrap whitespace-pre-line 2xl:text-3xl xl:text-3xl lg:text-2xl md:text-2xl sm:text-1xl text-1xl">Guias, Gameplay e Comunidade. Sua jornada épica
         começa aqui.</h2>
@@ -86,7 +112,7 @@
   <main class=" w-full h-full  sm:pl-15 sm:pr-16 p2- pr-2 flex flex-col gap-16">
 
 <!-- Aba de Videos e live-->
-    <div>
+    <div id="videos">
       <div class=" border-l-5 border-orange-400 font-kotta text-4xl whitespace-nowrap pl-2 mb-6 ">
         <h1 class="2xl:text-4xl xl:text-4xl lg:text-3xl md:text-2xl sm:text-1xl text-2xl" style="color: #E8A251;">Transmissao ao vivo</h1>
       </div>
@@ -97,7 +123,7 @@
 
 
           <div>
-            <iframe class="sm:w-[560px] sm:h-[320px] w-74 h-60" src="https://www.youtube.com/embed/PN1Or_SqBgs?si=VyZZC_v0Qv6_cdIG"
+            <iframe class="sm:w-[560px] sm:h-80 w-74 h-60" src="https://www.youtube.com/embed/PN1Or_SqBgs?si=VyZZC_v0Qv6_cdIG"
               title="YouTube video player" frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -142,7 +168,7 @@
 <!-- Aba de Videos e live-->
 
 <!-- Conteudo extra-->
-<div>
+<div id="guia">
  <div class=" border-l-5 border-orange-400 font-kotta text-4xl whitespace-nowrap pl-2 mb-6 ">
         <h1 class="2xl:text-4xl xl:text-4xl lg:text-3xl md:text-2xl sm:text-1xl text-2xl" style="color: #E8A251;">Biblioteca do sábio</h1>
       </div>
@@ -170,7 +196,7 @@
   
   </div>
 
-<div class=" border border-orange-400 bg-custom-gradient p-2  flex justify-center  items-center flex-col text-white sm:h-64 h-54 w-74 sm:w-[50vw] ">
+<div id="contact" class=" border border-orange-400 bg-custom-gradient p-2  flex justify-center  items-center flex-col text-white sm:h-64 h-54 w-74 sm:w-[50vw] ">
   <div class="flex flex-row justify-center items-center">
   <div class=" font-kotta text-4xl whitespace-nowrap pl-2 m-6 ">
       <div class="   border-l-5 border-orange-400 pl-2">  <h1 class="titulo" style="color: #E8A251;"> Kilua</h1></div>
@@ -236,6 +262,7 @@
 
 
 
+  <script src="script.js"></script>
 </body>
 
 </html>
